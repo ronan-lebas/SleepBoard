@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #12172c; /* Dark blue background */
+    color: #e0e6f0; /* Light text color */
+}
+
+header {
+    background-color: #1b2540; /* Darker blue for header */
+    color: #e0e6f0; /* Light text color */
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #1b2540; /* Darker blue for main content */
+    color: #e0e6f0; /* Light text color */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    border-radius: 8px;
+}
+
+h1, h2 {
+    margin: 0 0 1rem;
+    color: #cdd9f2; /* Soft light blue for headings */
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+    color: #cdd9f2; /* Soft light blue for labels */
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #3b475b; /* Subtle border */
+    border-radius: 4px;
+    background-color: #1e2b45; /* Dark input background */
+    color: #e0e6f0; /* Light text color */
+}
+
+input:focus {
+    outline: none;
+    border-color: #4e89ff; /* Highlighted border color */
+}
+
+button {
+    background-color: #4e89ff; /* Blue button */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+button:hover {
+    background-color: #3b75d4; /* Slightly darker blue on hover */
+}
+
+.plot-section img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #4e89ff; /* Highlight border */
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #12172c; /* Dark background for footer */
+    color: #cdd9f2; /* Light blue text */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+}

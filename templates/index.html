@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleepBoard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>SleepBoard</h1>
+    </header>
+    <main>
+        <section class="duration-info">
+            <h2>Sleep Statistics</h2>
+            <p>Current sleep time: <strong>{{ last_night_duration }}</strong></p>
+            <p>Average sleep time over last week: <strong>{{ last_week_duration }}</strong></p>
+        </section>
+        </br>
+        </br>        
+        <section class="plot-section">
+            <h2>Sleep Evolution</h2>
+            <img src="/static/sleep_plot.png" alt="No plot found!">
+            <img src="/static/duration_plot.png" alt="No plot found!">
+        </section>
+        </br>
+        </br>
+        <section class="form-section">
+            <h2>Add a night</h2>
+            <form method="POST">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <script>
+                    // Set the current date as the default value for the date input
+                    document.getElementById('date').value = new Date().toISOString().split('T')[0];
+                </script>
+
+                
+                <label for="fall_asleep">Fall Asleep Time:</label>
+                <input type="time" id="fall_asleep" name="fall_asleep" required>
+                
+                <label for="awake">Awake Time:</label>
+                <input type="time" id="awake" name="awake" required>
+                
+                <label for="wake_up">Wake Up Time:</label>
+                <input type="time" id="wake_up" name="wake_up" required>
+
+                <button type="submit">Add this night!</button>
+            </form>
+        </section>    
+        </br>
+        </br>
+        <section style="text-align: center;">
+            <a href="{{ url_for('manage') }}">
+            <button>Manage previous nights</button>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <p><a href="https://github.com/ronan-lebas/SleepBoard" class="link">SleepBoard by Ronan L</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Sleep Data</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Edit Sleep Data</h1>
+    </header>
+    <main>
+        <form method="POST">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" value="{{ row['date'] }}" required>
+
+            <label for="fall_asleep">Fall Asleep Time:</label>
+            <input type="time" id="fall_asleep" name="fall_asleep" value="{{ row['fall_asleep'] }}" required>
+
+            <label for="awake">Awake Time:</label>
+            <input type="time" id="awake" name="awake" value="{{ row['awake'] }}" required>
+
+            <label for="wake_up">Wake Up Time:</label>
+            <input type="time" id="wake_up" name="wake_up" value="{{ row['wake_up'] }}" required>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </main>
+</body>
+</html>

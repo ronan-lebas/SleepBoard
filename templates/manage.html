@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Sleep Data</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Manage Sleep Data</h1>
+    </header>
+    <main>
+        <table style="width: 100%; text-align: center;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Date</th>
+                    <th style="width: 20%;">Fall Asleep</th>
+                    <th style="width: 20%;">Awake</th>
+                    <th style="width: 20%;">Wake Up</th>
+                    <th style="width: 20%;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row['date'] }}</td>
+                    <td>{{ row['fall_asleep'] }}</td>
+                    <td>{{ row['awake'] }}</td>
+                    <td>{{ row['wake_up'] }}</td>
+                    <td>
+                        <form method="GET" action="{{ url_for('edit', index=loop.index0) }}" style="display:inline;">
+                            <button type="submit">Edit</button>
+                        </form>
+                        <form method="POST" action="{{ url_for('delete', index=loop.index0) }}" style="display:inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <section>
+            <a href="{{ url_for('index') }}">
+                <button>Back to Dashboard</button>
+            </a>
+        </section>
+    </main>
+</body>
+</html>
