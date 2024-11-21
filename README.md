@@ -9,4 +9,4 @@ cd SleepBoard/
 # Make a venv and activate it!
 pip install -r requirements.txt
 ```
-And start it with `python3 app.py`.
+Change the deployment parameters and start it with `python3 app.py`.

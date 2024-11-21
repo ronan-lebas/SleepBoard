@@ -7,10 +7,9 @@ from datetime import datetime, timedelta
 matplotlib.use("Agg")
 import os
 
-app = Flask(__name__)
-
-CSV_FILE = "sleep_data.csv"
 URL_PREFIX = ""
+app = Flask(__name__, template_folder="templates", static_folder="static", static_url_path=URL_PREFIX + "/static")
+CSV_FILE = "sleep_data.csv"
 
 # Ensure CSV exists
 if not os.path.exists(CSV_FILE):
@@ -171,4 +170,4 @@ def calculate_average_duration(df):
     return avg_duration
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=False, host="::", port=8080)

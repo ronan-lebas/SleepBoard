@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SleepBoard</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
@@ -20,8 +20,8 @@
         </br>        
         <section class="plot-section">
             <h2>Sleep Evolution</h2>
-            <img src="/static/sleep_plot.png" alt="No plot found!">
-            <img src="/static/duration_plot.png" alt="No plot found!">
+            <img src="{{ url_for('static', filename='sleep_plot.png') }}" alt="No plot found!">
+            <img src="{{ url_for('static', filename='duration_plot.png') }}" alt="No plot found!">
         </section>
         </br>
         </br>
